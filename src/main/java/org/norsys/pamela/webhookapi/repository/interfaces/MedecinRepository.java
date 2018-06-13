@@ -2,15 +2,13 @@ package org.norsys.pamela.webhookapi.repository.interfaces;
 
 import java.util.List;
 
-import org.norsys.pamela.webhookapi.model.Medecin;
-
 public interface MedecinRepository {
 	
 	/**
 	 * 
 	 * @return la liste de tous les medecins
 	 */
-	List<Medecin> tousLesMedecins();
+	List<String> tousLesMedecins();
 	
 	/**
 	 * 
@@ -40,7 +38,7 @@ public interface MedecinRepository {
 	 * @param nomMedecin
 	 * @return les noms des medecin correspondant a la specialité
 	 */
-	List<String> nomParSpécialité(String specialite);
+	List<String> nomParSpecialite(String specialite);
 	
 	/**
 	 * 
@@ -52,9 +50,9 @@ public interface MedecinRepository {
 	/**
 	 * 
 	 * @param disponibilité
-	 * @return les noms des medecin correspondant a l'etat de leur disponibilité
+	 * @return les noms des medecin dispo
 	 */
-	List<String> nomParDisponibilite(Boolean disponibilité);
+	List<String> nomParDisponibilite();
 	
 	
 }

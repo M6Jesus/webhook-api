@@ -1,5 +1,6 @@
 package org.norsys.pamela.webhookapi.model;
 
+
 public class Medecin {
 	
 	private Integer medecinID;

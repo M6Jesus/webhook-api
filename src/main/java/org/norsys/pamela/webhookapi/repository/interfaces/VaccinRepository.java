@@ -2,9 +2,6 @@ package org.norsys.pamela.webhookapi.repository.interfaces;
 
 import java.util.List;
 
-
-import org.norsys.pamela.webhookapi.model.Vaccin;
-
 public interface VaccinRepository {
 	
 	
@@ -12,7 +9,7 @@ public interface VaccinRepository {
 	 * 
 	 * @return la liste de tous les vaccins
 	 */
-	List<Vaccin> tousLesVaccins();
+	List<String> tousLesVaccins();
 		
 	/**
 	 * 
@@ -27,7 +24,7 @@ public interface VaccinRepository {
 	 * @param nomPays
 	 * @return vaccin Par Pays
 	 */
-	String vaccinParPays(String nomPays);
+	List<String> vaccinParPays(String nomPays);
 	
 	
 	
