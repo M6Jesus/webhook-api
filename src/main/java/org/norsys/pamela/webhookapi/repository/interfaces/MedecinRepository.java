@@ -2,6 +2,13 @@ package org.norsys.pamela.webhookapi.repository.interfaces;
 
 import java.util.List;
 
+
+/**
+ * Interface pour les methodes repository
+ * de la table medecin
+ * @author panou
+ *
+ */
 public interface MedecinRepository {
 	
 	/**
@@ -13,7 +20,7 @@ public interface MedecinRepository {
 	/**
 	 * 
 	 * @param nomMedecin
-	 * @return vrai ou faux
+	 * @return true ou false
 	 */
 	Boolean estDisponible(String nomMedecin);
 	

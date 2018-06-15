@@ -2,6 +2,13 @@ package org.norsys.pamela.webhookapi.repository.interfaces;
 
 import java.util.List;
 
+
+/**
+ * Interface presentant les methodes repository pour 
+ * la table vaccin
+ * @author panou
+ *
+ */
 public interface VaccinRepository {
 	
 	

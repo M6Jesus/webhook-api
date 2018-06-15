@@ -5,11 +5,17 @@ import java.util.List;
 import org.norsys.pamela.webhookapi.repository.interfaces.VaccinRepository;
 import org.norsys.pamela.webhookapi.repository.rowmappers.NomVaccinRM;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+
+/**
+ * Cette classeimplemente les methodes repository
+ * de la table vaccin
+ * @author panou
+ *
+ */
 @Repository
 public class VaccinRepositoryImpl implements VaccinRepository {
 	

@@ -9,12 +9,19 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+
+/**
+ * cette classe implemente les methodes repository
+ * de la table medecin
+ * @author panou
+ *
+ */
 @Repository
 public class MedecinRepositoryImpl implements MedecinRepository {
 
 	@Autowired
 	public JdbcTemplate jt;
-
+	
 	@Override
 	public List<String> tousLesMedecins() {
 		String TOUS_LES_MEDECINS = "select nomMedecin from medecin";
