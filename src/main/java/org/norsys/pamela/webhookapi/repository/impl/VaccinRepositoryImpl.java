@@ -2,6 +2,8 @@ package org.norsys.pamela.webhookapi.repository.impl;
 
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import org.norsys.pamela.webhookapi.repository.interfaces.VaccinRepository;
 import org.norsys.pamela.webhookapi.repository.rowmappers.NomVaccinRM;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +21,12 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class VaccinRepositoryImpl implements VaccinRepository {
 	
-	@Autowired
 	public JdbcTemplate jt;
+
+	@Autowired
+	public VaccinRepositoryImpl(final DataSource datasource) {
+		jt = new JdbcTemplate(datasource);
+	}
 
 	@Override
 	public List<String> tousLesVaccins() {
@@ -30,17 +36,14 @@ public class VaccinRepositoryImpl implements VaccinRepository {
 	}
 	
 	@Override
-	public Boolean estObligatoire(String nomVaccin) {
+	public Boolean estObligatoire(final String nomVaccin) {
 		String EST_IL_OBLIGATOIRE = "SELECT estObligatoire FROM vaccin WHERE nomVaccin = ?";
 		Object[] inputs = new Object[] {nomVaccin};
 		return jt.queryForObject(EST_IL_OBLIGATOIRE, inputs,  Boolean.class);
 	}
 
-	
-	
-	
 	@Override
-	public List<String> vaccinParPays(String Pays) {
+	public List<String> vaccinParPays(final String Pays) {
 		String VACCINS_PAR_PAYS = "SELECT nomVaccin FROM vaccin WHERE Pays = ?";
 		Object[] inputs = new Object[] {Pays};
 		RowMapper<String> vRowMapper = new NomVaccinRM();
