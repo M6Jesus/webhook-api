@@ -6,7 +6,7 @@
 	<artifactId>webhook-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
+	
 	<!-- =============================================================== -->
 	<!-- Propriétés -->
 	<!-- =============================================================== -->
@@ -76,6 +76,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>webhook-api</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
