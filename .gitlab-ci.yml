@@ -37,8 +37,8 @@ fleet:
         - eval $(ssh-agent -s)
         - ssh-add /home/jenkins/.ssh/id_rsa
         - export PATH=$PATH:/home/jenkins/fleet/bin
-        - fleetctl --strict-host-key-checking=false --tunnel=172.20.19.146 stop webhook-api_556.service
+        - fleetctl --strict-host-key-checking=false --tunnel=172.20.19.146 stop Thierry_Soler_GoogleHome_619.service
         - sleep 30
-        - fleetctl --strict-host-key-checking=false --tunnel=172.20.19.146 start webhook-api_556.service
+        - fleetctl --strict-host-key-checking=false --tunnel=172.20.19.146 start Thierry_Soler_GoogleHome_619.service
     only:
         - tags
